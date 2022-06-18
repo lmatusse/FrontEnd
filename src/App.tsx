@@ -51,7 +51,7 @@ const App: React.FC = () => {
     const categoria=document.getElementById('categoria') as HTMLSelectElement;
     const deadline=document.getElementById('deadline') as HTMLInputElement;
     const description=document.getElementById('description') as HTMLInputElement;
-
+const form_register=document.getElementById('form_register') as HTMLFormElement
     const create={
       name:name.value,
       categoriaId:categoria.value,
@@ -67,6 +67,7 @@ const App: React.FC = () => {
     if (response.statusText === "Created") {
       alert('Sucesso')
     }
+    form_register.reset();
     
   }
   return (
@@ -113,7 +114,7 @@ const App: React.FC = () => {
                        }).catch((e)=>{
                          console.log(e)
                        })
-                       
+                       showOrderDetails()
                         }}>Ver Detalhes</a>
                     
                    
@@ -123,11 +124,7 @@ const App: React.FC = () => {
             }
         </tbody>
         </Table> 
-        {
-          ordemOne.map((o: any, i: number) =>(
-            <p key={i}>{o.id}  {o.name}  {o.categoriaId}  {o.contact}  {o.estateAgency}  {o.company}  {o.deadline}</p>
-            ))
-        }
+        
             
           
         {/* Order Details */}
@@ -142,28 +139,30 @@ const App: React.FC = () => {
             <Modal.Title>Order Details</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+          {
+          ordemOne.map((o: any, i: number) => (
             <Row>
               <Col sm={8}>
                 <Row className='mb-3'>
                   <Col sm={7} className='order-details'>
                     <label>Contact Name</label>
-                    <strong>Alcides</strong>
+                    <strong>{o.name}</strong>
                   </Col>
                   <Col sm={5} className='order-details'>
                     <label>Contact Phone</label>
-                    <span>29002-022-21</span>
+                    <span>{o.contact}</span>
                   </Col>
                 </Row>
                 <Row className='mb-3'>
                   <Col sm={12} className='order-details'>
                     <label>Order Description</label>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio libero eaque quibusdam magni repellendus assumenda enim error dolor quasi quaerat.</p>
+                    <p>{o.description}</p>
                   </Col>
                 </Row>
                 <Row className='mb-3'>
                   <Col sm={12} className='order-details'>
                     <label>Category</label>
-                    <p>Hidraulica</p>
+                    <p>{o.category}</p>
                   </Col>
                 </Row>
               </Col>
@@ -171,23 +170,26 @@ const App: React.FC = () => {
                 <Row className='mb-3'>
                   <Col sm={12} className='order-details'>
                     <label>Real Estate Agency</label>
-                    <strong>Imobiliarios Loza</strong>
+                    <strong>{o.estateAgency}</strong>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm={12} className='order-details mb-4'>
                     <label>Company</label>
-                    <strong>Reparos S.A.</strong>
+                    <strong>{o.company}</strong>
                   </Col>
                 </Row>
                 <Row className='mt-4'>
                   <Col sm={12} className='order-details mt-4'>
                     <label>Deadline</label>
-                    <span>10/11/2021</span>
+                    <span>{o.deadline}</span>
                   </Col>
                 </Row>
               </Col>
             </Row>
+   
+            ))
+          }
           </Modal.Body>
         </Modal>
 
@@ -203,7 +205,7 @@ const App: React.FC = () => {
             <Modal.Title>New Order</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form id='form-register' onSubmit={saveOrdem}>
+            <Form id='form_register' onSubmit={saveOrdem}>
               <Row>
                 <Col sm={8}>
                   <Row>
