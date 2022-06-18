@@ -86,7 +86,7 @@ const form_register=document.getElementById('form_register') as HTMLFormElement
       <Container>
         <Header>
           <NewOrderButton outlined onClick={handleShow}>
-            Open new order
+            Open new ordem
           </NewOrderButton>
         </Header>
         <Table striped bordered hover>
