@@ -99,7 +99,7 @@ const form_register=document.getElementById('form_register') as HTMLFormElement
               <th>Agency</th>
               <th>Company</th>
               <th>Deadline</th>
-              <th>Detalhes</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -125,7 +125,7 @@ const form_register=document.getElementById('form_register') as HTMLFormElement
                        })
                        showOrderDetails()
                        
-                        }}>Ver Detalhes</a>
+                        }}>Details</a>
                     
                    
                     </td>
