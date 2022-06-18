@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 
 import Button from './components/Button';
-
+ 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    // width: min(950px, 100%);
+    width: min(1000px, 100%);
     background-color: #fff;
-
-    @media (min-width: 500px) {
-        // border-left: 1px solid var(--outline);
-        // border-right: 1px solid var(--outline);
-    }
 `;
 
 export const Header = styled.div`
@@ -28,24 +22,16 @@ export const Header = styled.div`
 
     text-align: left;
 
-    padding: 12px 20px;
-    // border-bottom: 1px solid var(--outline);
-
-    > button {
-        padding: 5px 8px;
-        border-radius: 50%;
-
-        outline: 0;
-        cursor: pointer;
-
-        &:hover {
-            background-color: var(--twitter-dark-hover);
-        }
-    }
+    padding: 30px 0;
 `;
 
 export const NewOrderButton = styled(Button)`
-    padding: 10px 16px;
-    font-size: 13px;
-    border-radius: 3px !important;
+    font-size: 14px;
+    border-radius: 3px;
+`;
+
+export const SaveOrderButton = styled(Button)`
+    font-size: 14px;
+    padding: 10px 30px !important;
+    border-radius: 3px;
 `;

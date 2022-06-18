@@ -16,28 +16,26 @@ export default createGlobalStyle`
         border: 0;
         outline: none;
         background: none;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
     html {
         color: #011017;
-        background-color: var(--primary);
+        background-color: var(--white);
     }
     body {
-        
-        background-color: var(--primary);
+        background-color: var(--white);
     }
     :root {
-        --primary: #f4f5f9;
+        --light-100: #f9f9f9;
+        --light-300: #f4f5f9;
         --secondary: #1518c1;
         --search: #202327;
-        --white: #333;
-        --light: #fff;
+        --white: #ffffff;
         --gray: #7a7a7a;
         --outline: #ddd;
-        --retweet: #00c068;
         --like: #e8265e;
-        --twitter: #33a1f2;
-        --twitter-dark-hover: #011017;
-        --twitter-light-hover: #2c8ed6;
+        --primary: #33a1f2;
+        --primary-dark-hover: #011017;
+        --primary-light-hover: #2c8ed6;
     }
 `;

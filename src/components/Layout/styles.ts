@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* background-color: var(--primary); */
-  background-color: aliceblue;
+  background-color: var(--white);
 `;
 export const Wrapper = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 

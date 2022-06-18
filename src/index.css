@@ -1,13 +1,80 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.table {
+    text-align: center;
+    border: 1px solid #ddd !important;
+}
+
+.table thead {
+    background-color: #ddd;
+}
+
+.table thead th {
+    font-size: 14px;
+}
+
+.table tbody tr {
+    cursor: pointer;
+}
+
+.table tbody td {
+    font-size: 13px;
+}
+
+.table>:not(:first-child) {
+    border-top: 0 !important;
+}
+
+.modal-header {
+    border-bottom: 0 !important;
+}
+
+.btn-close {
+    font-size: 13px;
+}
+
+.modal-title {
+    font-size: 15px !important;
+}
+
+.modalOrderDetails label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.modalOrderDetails strong,
+span {
+    font-size: 16px;
+}
+
+.modalOrderDetails p {
+    color: var(--light);
+    font-size: 13px;
+}
+
+.modalOrderDetails .info-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalNewOrder label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.modalNewOrder input,
+select,
+option {
+    font-size: 14px;
 }

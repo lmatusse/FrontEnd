@@ -1,8 +1,0 @@
-.order-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.order-details label {
-    margin-bottom: 10px;
-}

@@ -1,4 +1,79 @@
-.sendButton {
+.saveButton {
     display: flex;
     justify-content: flex-end;
+}
+
+.table {
+    text-align: center;
+    border: 1px solid #ddd !important;
+}
+
+.table thead {
+    background-color: #ddd;
+}
+
+.table thead th {
+    font-size: 15px;
+}
+
+.table tbody td {
+    font-size: 14px;
+}
+
+.table tbody td a {
+    cursor: pointer;
+    color: var(--primary) !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.table tbody td a:hover {}
+
+.table>:not(:first-child) {
+    border-top: 0 !important;
+}
+
+.modal-header {
+    border-bottom: 0 !important;
+}
+
+.btn-close {
+    font-size: 13px;
+}
+
+.modal-title {
+    font-size: 15px !important;
+}
+
+.modalOrderDetails label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.modalOrderDetails strong,
+span {
+    font-size: 16px;
+}
+
+.modalOrderDetails p {
+    color: var(--light);
+    font-size: 13px;
+}
+
+.modalOrderDetails .info-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalNewOrder label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.modalNewOrder input,
+select,
+option {
+    font-size: 14px;
 }
